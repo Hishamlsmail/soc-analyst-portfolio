@@ -24,3 +24,17 @@ Context is everything:
 
 Rule: True Positive needs multiple 
 suspicious factors together.
+________________________________________________
+## Linux Auth Log Analysis
+
+File: /var/log/auth.log
+Command: grep "Failed" /var/log/auth.log
+
+Key log entries:
+- sudo session opened = user ran sudo command
+- COMMAND= shows exactly what was executed
+- "Failed password" = failed login attempt (not found = no attacks)
+
+Key difference from Windows:
+- Windows = Event Viewer (GUI)
+- Linux = /var/log/auth.log (text file)
