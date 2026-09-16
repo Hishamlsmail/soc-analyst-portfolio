@@ -38,3 +38,26 @@ Key log entries:
 Key difference from Windows:
 - Windows = Event Viewer (GUI)
 - Linux = /var/log/auth.log (text file)
+- ________________________________________________________
+- ## Networking Knowledge (Pre-existing)
+
+### DNS
+- Converts domain names to IP addresses
+- Without DNS, we'd memorize IPs for every website
+
+### TCP vs UDP
+- TCP = slower, has handshake, reliable (HTTP, SSH)
+- UDP = faster, no handshake (gaming, video, streaming)
+
+### Suspicious Ports — SOC Rule
+| Port | Service | Status |
+|------|---------|--------|
+| 80 | HTTP | Normal ✅ |
+| 443 | HTTPS | Normal ✅ |
+| 53 | DNS | Normal ✅ |
+| 4444 | Metasploit/Reverse Shell | Suspicious 🔴 |
+| 1337 | Common hacker port | Suspicious 🔴 |
+
+### MITRE Mapping
+- Port 4444 = T1571 Non-Standard Port
+- Tactic: TA0011 Command and Control
