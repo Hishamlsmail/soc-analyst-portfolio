@@ -61,3 +61,29 @@ Key difference from Windows:
 ### MITRE Mapping
 - Port 4444 = T1571 Non-Standard Port
 - Tactic: TA0011 Command and Control
+- _________________________________________________________
+- ## Splunk — First Investigation
+
+### SPL Queries Used
+1. index=* EventCode=4625
+2. index=* EventCode=4625 | stats count by Account_Name
+3. index=* EventCode=4625 Account_Name=HISHAM 
+   | stats count by _time, Account_Name
+
+### Finding
+- HISHAM: 30 failed logins over 3 days
+- fakeuser: 1 failed login
+
+### Verdict: FALSE POSITIVE
+- Real username (not fake)
+- Spread over 3 days (not brute force pattern)
+- During business hours
+- Likely forgotten password
+
+### Brute Force vs Forgotten Password
+| Indicator | Brute Force | Forgotten Password |
+|-----------|-------------|-------------------|
+| Count | 100s in minutes | Few over days |
+| Username | Often fake | Real |
+| Time | Night/odd hours | Business hours |
+| Pattern | Rapid sequential | Scattered |
