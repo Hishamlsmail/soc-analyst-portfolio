@@ -41,3 +41,18 @@ TRUE POSITIVE — Suspicious enumeration activity
 Escalate to L2 to verify whether the attacker 
 used the enumerated permissions to gain 
 higher privileges on the system.
+____________________________________________________________
+## Investigation Results
+
+I searched for Event ID 4672 (Special Privileges).
+Found 94 events — all from known accounts:
+- HISHAM (me)
+- Splunkd
+- DWM-1, DWM-2, DWM-3
+- LOCAL SERVICE, NETWORK SERVICE
+
+No suspicious accounts found.
+Conclusion: Normal activity — no unauthorized 
+privileged access detected.
+<img width="3837" height="2225" alt="Screenshot 2026-09-18 072920" src="https://github.com/user-attachments/assets/2c9f8a74-f776-4fbc-83ab-f4f399bbd91e" />
+<img width="3837" height="2225" alt="Screenshot 2026-09-18 072920" src="https://github.com/user-attachments/assets/66e3b24d-9049-4ea6-bfef-a7a5bf60d992" />
