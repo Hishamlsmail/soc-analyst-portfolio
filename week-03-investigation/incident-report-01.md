@@ -37,3 +37,7 @@ TRUE POSITIVE — Suspicious enumeration activity
 
 ### Timeline of Events  
 <img width="3837" height="2112" alt="Screenshot 2026-09-18 071531" src="https://github.com/user-attachments/assets/3c8b223e-74ad-44d6-9eb1-235c49237bf5" />
+## Recommendation
+Escalate to L2 to verify whether the attacker 
+used the enumerated permissions to gain 
+higher privileges on the system.
