@@ -87,3 +87,16 @@ Key difference from Windows:
 | Username | Often fake | Real |
 | Time | Night/odd hours | Business hours |
 | Pattern | Rapid sequential | Scattered |
+__________________________________________________
+## MITRE T1110 - Brute Force
+
+| Sub-technique | Description |
+|---|---|
+| T1110.001 | Password Guessing - many passwords, one account |
+| T1110.002 | Password Cracking - offline hash cracking |
+| T1110.003 | Password Spraying - one password, many accounts |
+| T1110.004 | Credential Stuffing - using leaked credentials |
+
+SOC Rule: 
+- High count + short time + one account = T1110.001
+- One password + many accounts = T1110.003
