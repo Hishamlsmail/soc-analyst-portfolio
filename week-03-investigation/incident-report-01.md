@@ -59,3 +59,38 @@ Conclusion: Normal activity — no unauthorized
 privileged access detected.
 <img width="3837" height="2225" alt="Screenshot 2026-09-18 072920" src="https://github.com/user-attachments/assets/2c9f8a74-f776-4fbc-83ab-f4f399bbd91e" />
 <img width="3837" height="2225" alt="Screenshot 2026-09-18 072920" src="https://github.com/user-attachments/assets/66e3b24d-9049-4ea6-bfef-a7a5bf60d992" />
+_______________________________________________________
+
+# Incident Report #002 — Phishing Analysis
+**Date:** 2026-09-18
+**Analyst:** Hesham Ismail
+**Severity:** High 🔴
+
+## Summary
+A phishing email was received claiming to be 
+from PayPal. The sender domain was "paypa1.com" 
+(typosquatting). The email urged the user to 
+click a malicious link by claiming their account 
+would be suspended.
+
+## Indicators of Compromise (IOCs)
+- Sender: security@paypa1.com
+- Fake domain: paypa1.com (typosquatting paypal.com)
+- Malicious URL: http://paypa1.com/verify
+- VirusTotal: 13/90 vendors flagged as Phishing
+
+## MITRE ATT&CK
+- Tactic: TA0001 - Initial Access
+- Technique: T1566 - Phishing
+
+## Verdict
+TRUE POSITIVE — Confirmed Phishing Attack
+
+## Recommendations
+1. Block sender domain: paypa1.com
+2. Warn the employee not to click the link
+3. Check if employee already clicked the link
+4. Escalate to L2 if link was clicked
+
+## Evidence
+<img width="3837" height="2107" alt="image" src="https://github.com/user-attachments/assets/6b69461b-fc63-489e-909f-f0feeb434c4f" />
