@@ -94,3 +94,12 @@ TRUE POSITIVE — Confirmed Phishing Attack
 
 ## Evidence
 <img width="3837" height="2107" alt="image" src="https://github.com/user-attachments/assets/6b69461b-fc63-489e-909f-f0feeb434c4f" />
+___________________________________________________________________________
+## Sysmon Key Event IDs
+
+| Event ID | What it logs | Why SOC cares |
+|----------|-------------|---------------|
+| 1 | Process Created | Detects new processes — suspicious when unexpected parent/child relationship exists |
+| 3 | Network Connection | Detects network connections — suspicious when normal apps connect to unknown IPs or ports |
+| 11 | File Created | Detects file creation — suspicious when Office apps create executable files |
+| 13 | Registry Modified | Detects registry changes — suspicious when malware adds itself to Run key for persistence |
